@@ -1,0 +1,134 @@
+Steps to Run the project:
+
+---First download and set up java 8.
+
+---Set path variable for java in system environmental variables.
+
+---download and extract apache tomact8 strictly from our web project folder as it is having some ammendments related to project and netbeans.
+
+---Download netbeans-8 and set up this also on your system.
+
+----Then open netbeans and select tools menu --> servers --> addserver --> apache tomcat --> serverlocation(Extarcted apachetomcat server location)
+
+----username:tomcat and password;tomcat ---> check box create users if not exists --> click on finish.
+
+---Download apache mysql server 5 and mysql query browser and set up this also with password:root (strictly as this password has been used in project) 
+
+---Set up mysql server5 as service on port 3306 (default configuration)
+
+---Then open netbeans and go to file menu.
+
+---Then go to import project submenu and browse downloaded Airline.zip folder into this.
+
+---click on import then it will automatically import the project into net beans.
+
+-- Then here comes sql part 
+
+-- Open sql query browser and login with username :root and password: root with host:localhost port:3306 and schema : airline (strictly (case sensitive as this is used in our project))
+
+-- then select default schema airline through mysql and run below sql scripts:
+
+-----DROP TABLE IF EXISTS `airline`.`airport`;
+-----CREATE TABLE  `airline`.`airport` (
+  `country_name` varchar(255) default NULL,
+  `airport_name` varchar(255) default NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+----DROP TABLE IF EXISTS `airline`.`cancellation`;
+----CREATE TABLE  `airline`.`cancellation` (
+  `cust_id` varchar(255) default NULL,
+  `flight_num` varchar(255) default NULL,
+  `org` varchar(255) default NULL,
+  `destination` varchar(255) default NULL,
+  `flight_name` varchar(255) default NULL,
+  `dep_time` varchar(255) default NULL,
+  `arriv_time` varchar(255) default NULL,
+  `seat_num` varchar(255) default NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+----DROP TABLE IF EXISTS `airline`.`flightinfo`;
+----CREATE TABLE  `airline`.`flightinfo` (
+  `flightnum` varchar(255) default NULL,
+  `flightname` varchar(255) default NULL,
+  `departure` varchar(255) default NULL,
+  `arrival` varchar(255) default NULL,
+  `origin` varchar(255) default NULL,
+  `destination` varchar(255) default NULL,
+  `seats` varchar(255) default NULL,
+  `country` varchar(255) default NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+----DROP TABLE IF EXISTS `airline`.`register`;
+----CREATE TABLE  `airline`.`register` (
+  `username` varchar(255) default NULL,
+  `password` varchar(255) default NULL,
+  `fname` varchar(255) default NULL,
+  `lname` varchar(255) default NULL,
+  `email` varchar(255) default NULL,
+  `phone` varchar(255) default NULL,
+  `job` varchar(255) default NULL,
+  `add1` varchar(255) default NULL,
+  `add2` varchar(255) default NULL,
+  `city` varchar(255) default NULL,
+  `state` varchar(255) default NULL,
+  `contry` varchar(255) default NULL,
+  `zip` varchar(255) default NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+----DROP TABLE IF EXISTS `airline`.`reservation`;
+----CREATE TABLE  `airline`.`reservation` (
+  `cust_id` varchar(255) default NULL,
+  `flightnum` varchar(255) default NULL,
+  `flightname` varchar(255) default NULL,
+  `departure` varchar(255) default NULL,
+  `arrival` varchar(255) default NULL,
+  `orig` varchar(255) default NULL,
+  `destination` varchar(255) default NULL,
+  `seats` varchar(255) default NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+----DROP TABLE IF EXISTS `airline`.`transaction`;
+----CREATE TABLE  `airline`.`transaction` (
+  `credit_num` varchar(255) default NULL,
+  `credit_type` varchar(255) default NULL,
+  `pin_num` varchar(255) default NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+---- insert into airport values ('INDIA','IGI-DELHI');
+----you can insert as many as airport values by replacing 'INDIA' and 'IGI-DELHI' 
+
+---- insert into flightinfo values ('1234','Spicejet','10:00 AM','12:00 PM','New Delhi','Texas','35','USA');
+---- you can insert as many as airport values by replacing '1234' and 'spiceJet' etc respectively.
+---- this table is important for functionality as resevation and cancellation completely depends upon it.
+
+
+
+
+---- then right click on project (airline_reservation) ---> clean and build .
+
+---- after this again right click on project (airline_reservation) --> deploy.
+
+---- go to defalut browser and paste URL: http://localhost:8080/AirLine_Reservation/Login.jsp
+
+---- after this go to new user and fill all your info .(all feilds are required validations)
+
+---- Hit back button on browser and go to login page and enter your newly created username and password.
+
+---- it will redirect to home page and then click on menu's
+
+---- You can only reserve seats in flights which are peresnt in flightinformation ( flight number and flight name must be equal to flightinformation values)
+
+---- same in the case of flight cancellation ( customer_id and flight_num must be matched with reservation table values)
+
+---- Every transaction will be succesfull
+
+---logout will redirect to login page again..
+
+
+
+
+
+
+
+---- 
+

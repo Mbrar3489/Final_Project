@@ -1,0 +1,90 @@
+18-Dec-2015 09:50:01.904 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version: Apache Tomcat/8.0.14
+18-Dec-2015 09:50:01.908 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:   Sep 24 2014 09:01:51
+18-Dec-2015 09:50:01.908 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:  8.0.14.0
+18-Dec-2015 09:50:01.908 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:        Windows 10
+18-Dec-2015 09:50:01.908 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:     10.0
+18-Dec-2015 09:50:01.908 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:   amd64
+18-Dec-2015 09:50:01.908 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:    1.8.0_65-b17
+18-Dec-2015 09:50:01.908 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:     Oracle Corporation
+18-Dec-2015 09:50:02.380 INFO [main] org.apache.catalina.core.AprLifecycleListener.init The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jdk1.8.0_65\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Sony\VAIO Improvement\;C:\Program Files (x86)\Sony\VAIO Startup Setting Tool;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio\;C:\Program Files\Java\jre1.8.0_65\bin;C:\Program Files (x86)\Windows Live\Shared;.
+18-Dec-2015 09:50:03.173 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+18-Dec-2015 09:50:03.253 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+18-Dec-2015 09:50:03.257 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+18-Dec-2015 09:50:03.273 SEVERE [main] org.apache.coyote.AbstractProtocol.init Failed to initialize end point associated with ProtocolHandler ["ajp-nio-8009"]
+ java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:343)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:730)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:456)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:960)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:567)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:842)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:576)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:599)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:310)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:484)
+
+18-Dec-2015 09:50:03.285 SEVERE [main] org.apache.catalina.core.StandardService.initInternal Failed to initialize connector [Connector[AJP/1.3-8009]]
+ org.apache.catalina.LifecycleException: Failed to initialize component [Connector[AJP/1.3-8009]]
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:106)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:567)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:842)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:576)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:599)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:310)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:484)
+Caused by: org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:962)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	... 12 more
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:343)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:730)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:456)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:960)
+	... 13 more
+
+18-Dec-2015 09:50:03.285 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1503 ms
+18-Dec-2015 09:50:03.399 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service Catalina
+18-Dec-2015 09:50:03.399 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.0.14
+18-Dec-2015 09:50:03.411 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory C:\Users\Manpreet Brar\Desktop\Web Project\Web project\Web Project\apache-tomcat-8.0.14-windows-x86\apache-tomcat-8.0.14\webapps\docs
+18-Dec-2015 09:50:04.077 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory C:\Users\Manpreet Brar\Desktop\Web Project\Web project\Web Project\apache-tomcat-8.0.14-windows-x86\apache-tomcat-8.0.14\webapps\docs has finished in 666 ms
+18-Dec-2015 09:50:04.077 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory C:\Users\Manpreet Brar\Desktop\Web Project\Web project\Web Project\apache-tomcat-8.0.14-windows-x86\apache-tomcat-8.0.14\webapps\examples
+18-Dec-2015 09:50:06.027 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory C:\Users\Manpreet Brar\Desktop\Web Project\Web project\Web Project\apache-tomcat-8.0.14-windows-x86\apache-tomcat-8.0.14\webapps\examples has finished in 1,950 ms
+18-Dec-2015 09:50:06.027 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory C:\Users\Manpreet Brar\Desktop\Web Project\Web project\Web Project\apache-tomcat-8.0.14-windows-x86\apache-tomcat-8.0.14\webapps\host-manager
+18-Dec-2015 09:50:06.141 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory C:\Users\Manpreet Brar\Desktop\Web Project\Web project\Web Project\apache-tomcat-8.0.14-windows-x86\apache-tomcat-8.0.14\webapps\host-manager has finished in 110 ms
+18-Dec-2015 09:50:06.141 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory C:\Users\Manpreet Brar\Desktop\Web Project\Web project\Web Project\apache-tomcat-8.0.14-windows-x86\apache-tomcat-8.0.14\webapps\manager
+18-Dec-2015 09:50:06.281 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory C:\Users\Manpreet Brar\Desktop\Web Project\Web project\Web Project\apache-tomcat-8.0.14-windows-x86\apache-tomcat-8.0.14\webapps\manager has finished in 140 ms
+18-Dec-2015 09:50:06.281 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory C:\Users\Manpreet Brar\Desktop\Web Project\Web project\Web Project\apache-tomcat-8.0.14-windows-x86\apache-tomcat-8.0.14\webapps\ROOT
+18-Dec-2015 09:50:06.357 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory C:\Users\Manpreet Brar\Desktop\Web Project\Web project\Web Project\apache-tomcat-8.0.14-windows-x86\apache-tomcat-8.0.14\webapps\ROOT has finished in 76 ms
+18-Dec-2015 09:50:06.365 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+18-Dec-2015 09:50:06.377 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 3092 ms
+18-Dec-2015 09:50:07.117 INFO [http-nio-8080-exec-5] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor C:\Users\Manpreet Brar\Desktop\Web Project\Web project\Web Project\apache-tomcat-8.0.14-windows-x86\apache-tomcat-8.0.14\conf\Catalina\localhost\AirLine_Reservation.xml
+18-Dec-2015 09:50:10.808 INFO [http-nio-8080-exec-5] org.apache.struts.tiles.TilesPlugin.initDefinitionsFactory Tiles definition factory loaded for module ''.
+18-Dec-2015 09:50:10.816 INFO [http-nio-8080-exec-5] org.apache.struts.validator.ValidatorPlugIn.initResources Loading validation rules file from '/WEB-INF/validator-rules.xml'
+18-Dec-2015 09:50:10.816 INFO [http-nio-8080-exec-5] org.apache.struts.validator.ValidatorPlugIn.initResources Loading validation rules file from '/WEB-INF/validation.xml'
+18-Dec-2015 09:50:11.036 INFO [http-nio-8080-exec-5] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor C:\Users\Manpreet Brar\Desktop\Web Project\Web project\Web Project\apache-tomcat-8.0.14-windows-x86\apache-tomcat-8.0.14\conf\Catalina\localhost\AirLine_Reservation.xml has finished in 3,915 ms
+18-Dec-2015 09:50:11.048 INFO [http-nio-8080-exec-4] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/AirLine_Reservation]] after start() had already been called. The second call will be ignored.
+18-Dec-2015 09:53:08.359 INFO [http-nio-8080-exec-10] org.apache.struts.tiles.TilesRequestProcessor.initDefinitionsMapping Tiles definition factory found for request processor ''.
